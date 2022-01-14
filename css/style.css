@@ -1,0 +1,112 @@
+:root {
+    --lav: #8576A6;
+    --vio: #2B2840;
+    --mar: #8C2E62; 
+    --dar: #0D0D0D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--lav);
+}
+
+/* Positioning elements */
+.start-button,
+.info-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling start button*/
+.start-button {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--vio);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: lightgray;
+}
+
+/*Styling the info box*/
+.info-box{
+    display: none;
+    width: 540px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.info-box .info-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--dar);
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info-box .info-list {
+    padding: 15px 35px;
+}
+
+.info-box .info {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.info-box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid var(--dar);
+}
+
+.info-box .buttons .quit{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid var(--lav);
+    background-color: #fff;
+    border-radius: 5px;
+    color: var(--lav);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info-box .buttons .continue {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid var(--lav);
+    background-color: var(--lav);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info-box .buttons .quit:hover,
+.info-box .buttons .continue:hover {
+    background-color: var(--vio);
+}

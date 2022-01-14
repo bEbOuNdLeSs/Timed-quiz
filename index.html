@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Start Button -->
@@ -14,22 +14,53 @@
 
     <!-- Info Box -->
     <div class = 'info-box'> 
-        <span>Quiz Rules</span>
+        <div class = 'info-title'>
+            <p>Quiz rules</p>
+        </div>
+
+        <div class = 'info-list'>
+            <p class = 'info'>A</p>
+            <p class = 'info'>B</p>
+            <p class = 'info'>C</p>
+            <p class = 'info'>D</p>
+            <p class = 'info'>E</p>
+        </div>
+
+        <div class = 'buttons'>
+            <button class = 'quit'>Exit Quiz</button>
+            <button class = 'continue'>Continue</button>
+        </div>
     </div>
 
-    <ul class = 'info-list'>
-        <li class = 'info'>A</div>
-        <li class = 'info'>B</div>
-        <li class = 'info'>C</div>
-        <li class = 'info'>D</div>
-        <li class = 'info'>E</div>   
-    </ul>
-
-    <div class = 'buttons'>
-        <button class = 'quit'>Exit Quiz</button>
-        <button class = 'continue'>Continue</button>
+    <!-- Quiz Box  -->
+    <div class = 'quiz-box'>
+        <header>
+            <p>Timed Quiz Session</p>
+            <div class = 'timer'>
+                <p class = 'timer-text'>Time remaining</p>
+                <p class = 'timer-time'>15</p>
+            </div>
+        </header>
+        <section>
+            <div class="question">
+                <span>Commonly used data types DO NOT include:</span>
+            </div>
+            <div class = 'option'>
+                <span>Strings</span>
+            </div>
+            <div class = 'option'>
+                <span>Booleans</span>
+            </div>
+            <div class = 'option'>
+                <span>Alerts</span>
+            </div>
+            <div class = 'option'>
+                <span>Numberse</span>
+            </div>
+        </section>
     </div>
 
-    <script src='script.js'></script>
+    <script src='js/questions.js'></script>
+    <script src='js/quiz.js'></script>
 </body>
 </html>
