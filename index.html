@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <script src="https://kit.fontawesome.com/71f979c698.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,37 +28,70 @@
         </div>
 
         <div class = 'buttons'>
-            <button class = 'quit'>Exit Quiz</button>
-            <button class = 'continue'>Continue</button>
+            <button class = 'quit-btn'>Exit Quiz</button>
+            <button class = 'continue-btn'>Continue</button>
         </div>
     </div>
 
     <!-- Quiz Box  -->
     <div class = 'quiz-box'>
         <header>
-            <p>Timed Quiz Session</p>
+            <div class = 'quiz-title'>Timed Quiz Session</div>
             <div class = 'timer'>
                 <p class = 'timer-text'>Time remaining</p>
                 <p class = 'timer-time'>15</p>
             </div>
         </header>
-        <section>
-            <div class="question">
+
+        <div class = 'question-box'>
+            <div class='question'>
                 <span>Commonly used data types DO NOT include:</span>
             </div>
-            <div class = 'option'>
-                <span>Strings</span>
+
+            <div class = 'options-list'>
+                <div class = 'option'>
+                    <span>Strings</span>
+                    <div class = 'icon-cross'><i class = 'fas fa-times'></i></div>
+                </div>
+                <div class = 'option'>
+                    <span>Booleans</span>
+                    <div class = 'icon-cross'><i class = 'fas fa-times'></i></div>
+                </div>
+                <div class = 'option'>
+                    <span>Alerts</span>
+                    <div class = 'icon-tick'><i class = 'fas fa-check'></i></div>
+                </div>
+                <div class = 'option'>
+                    <span>Numbers</span>
+                    <div class = 'icon-cross'><i class = 'fas fa-times'></i></div>
+                </div>
             </div>
-            <div class = 'option'>
-                <span>Booleans</span>
+        </div>
+
+        <!-- Quiz Box Footer -->
+        <footer>
+            <div class = 'total-questions'>
+                <span> <p>1</p> of <p>5</p> questions</span>
             </div>
-            <div class = 'option'>
-                <span>Alerts</span>
-            </div>
-            <div class = 'option'>
-                <span>Numberse</span>
-            </div>
-        </section>
+            <button class = 'next-btn'>Next</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class = "result-box">
+        <div class = 'crown'>
+            <i class = 'fas fa-crown'></i>
+        </div>
+        <div class = "completed">
+            <span>You've completed the Quiz!</span>
+        </div>
+        <div class = "score">
+            <span>You got <p>#</p> out of <p>#</p> correct!</span>
+        </div>
+        <div class = 'buttons'>
+            <button class = 'continue-btn'>Restart Quiz</button>
+            <button class = 'quit-btn'>Quit Quiz</button>
+        </div>
     </div>
 
     <script src='js/questions.js'></script>
