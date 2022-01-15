@@ -30,6 +30,15 @@ body {
                 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }           
 
+.info-box.activeInfo,
+.quiz-box.activeQuiz,
+.result-box.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 /* Styling start button*/
 .start-button {
     font-size: 25px;

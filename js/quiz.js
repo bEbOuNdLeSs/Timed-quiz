@@ -7,4 +7,9 @@
  */
 console.log(questions);
 
+const start_btnEl = document.querySelector(".start-button");
+const info_boxEl = document.querySelector(".info-box");
 
+start_btnEl.onclick = () => {
+    info_boxEl.classList.add("activeInfo");
+}
