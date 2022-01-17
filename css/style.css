@@ -28,6 +28,7 @@ body {
     transform: translate(-50%, -50%);
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
 }           
 
 .info-box.activeInfo,
@@ -99,6 +100,7 @@ body {
     margin: 0 5px;
     height: 40px;
     width: 100px;
+    outline: none;
     border: 1px solid var(--lav);
     background-color: #fff;
     border-radius: 5px;
@@ -113,6 +115,7 @@ body {
     margin: 0 5px;
     height: 40px;
     width: 100px;
+    outline: none;
     border: 1px solid var(--lav);
     background-color: var(--lav);
     border-radius: 5px;
@@ -193,7 +196,7 @@ body {
     background-color: #fff;
 }
 
-.quiz-box .question-box .question {
+.quiz-box .question-box .que_text {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 15px;
