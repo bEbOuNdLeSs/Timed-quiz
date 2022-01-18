@@ -2,99 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coding Quiz</title>
 
-    <script src="https://kit.fontawesome.com/71f979c698.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- linking css and bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Start Button -->
-    <button class = 'start-button'>Start Quiz</button>
+    <!-- main content -->
+    <div class="container-fluid">
 
-    <!-- Info Box -->
-    <div class = 'info-box'> 
-        <div class = 'info-title'>
-            <p>Quiz rules</p>
+        <!-- top for highscore link and timer -->
+        <div class="row">
+            <div class="col text-left">
+                <a href="#" id="viewHighScore">View High Scores</a>
+            </div>
+            <div id="timer" class="col text-right">
+                <i class="far fa-clock"></i> Time: <span id="timeLeft">0</span>
+            </div>
+            <div id="timesUp" class="col text-right" style="display: none;">Time's Up!</div>
         </div>
 
-        <div class = 'info-list'>
-            <p class = 'info'>A</p>
-            <p class = 'info'>B</p>
-            <p class = 'info'>C</p>
-            <p class = 'info'>D</p>
-            <p class = 'info'>E</p>
-        </div>
+        <div id="everything" class="row text-left">
+            <div class="col-md-2"></div>
+              <main class="col-md-8 mt-5">
+                  <!--start screen  -->
+                  <div id="start" class="m-2 justify-content-center">
+                      <h1 class="font-weight-bold pl-5 pr-5">Coding Quiz Challenge</h1>
+                      <p class="p-5">Let's test your knowledge on JavaScript fundamentals! Try to answer the followding code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by ten seconds!</p>
+                      <button type="button" id="start-quiz-button" class="btn btn-info ml-5 align-center">Start Quiz</button>
+                  </div>
 
-        <div class = 'buttons'>
-            <button class = 'quit-btn'>Exit Quiz</button>
-            <button class = 'continue-btn'>Continue</button>
+                  <!--quiz div  -->
+                  <div id="questionDiv" style="display: none;">
+                    <p id="questionTitle" class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold"></p>
+                    <div class="pl-5 pt-2 pb-3 m-2 justify-content-center">
+                        <p><button id="btn0" class="btn btn-dark"></button></p>
+                        <p><button id="btn1" class="btn btn-dark"></button></p>
+                        <p><button id="btn2" class="btn btn-dark"></button></p>
+                        <p><button id="btn3" class="btn btn-dark"></button></p>
+                        <hr id="lineBreak" style="display: none" class="mt-4">
+                        <p id="answerCheck" style="display: none;"></p>
+                    </div>
+                  </div>
+
+                  <!-- score div -->
+                    <div class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold" id="summary" style="display: none;">
+                        <div class="col-2"></div>
+                        <div class="col-8 text-left">
+                            <h2 class="font-weight-bold pt-2 pb-3 m-2">Your final score is <span id="finalScore"></span> !</h2>
+                            <form>
+                                <p class="pt-2 pb-3 m-2">Enter your initials: <input id="initialInput" class="form-control pt-2 pb-3 mt-2" type="text">
+                                <button type="submit" id="submitInitialBtn" class="btn btn-info mt-3">Submit</button>
+                                </p>
+                            </form>
+                        </div>
+                    <div class="col-2"></div>
+                </div>
+
+                <!-- highscores section -->
+                <div id="highScoreSection" class="pl-5 ml-4 pt-5 justify-content-center font-weight-bold" style="display: none;">
+                    <h2 class="font-weight-bold pt-2 pb-3 mb-2">High Scores</h2>                   
+                    
+                    <div id="listOfHighScores" class="list-group list-group-flush pt-2 pb-3 mb-2"></div>
+
+                    <!-- append each highscore as new paragraph here -->
+                    <p>
+                        <button type="submit" class="btn btn-info mt-3 mr-3" id="goBackBtn">Go Back</button>
+                        <button type="submit" class="btn btn-info mt-3" id="clearHighScoreBtn">Clear High Scores</button>
+                    </p>
+                    
+                </div>
+              </main>
+            <div class="col-md-2"></div>
         </div>
     </div>
 
-    <!-- Quiz Box  -->
-    <div class = 'quiz-box'>
-        <header>
-            <div class = 'quiz-title'>Timed Quiz Session</div>
-            <div class = 'timer'>
-                <p class = 'timer-text'>Time remaining</p>
-                <p class = 'timer-time'>15</p>
-            </div>
-        </header>
-
-        <div class = 'question-box'>
-            <div class='que_text'>
-                <!-- <span>Commonly used data types DO NOT include:</span> -->
-            </div>
-
-            <div class = 'options-list'>
-                <div class = 'option'>
-                    <span>Strings</span>
-                    <div class = 'icon-cross'><i class = 'fas fa-times'></i></div>
-                </div>
-                <div class = 'option'>
-                    <span>Booleans</span>
-                    <div class = 'icon-cross'><i class = 'fas fa-times'></i></div>
-                </div>
-                <div class = 'option'>
-                    <span>Alerts</span>
-                    <div class = 'icon-tick'><i class = 'fas fa-check'></i></div>
-                </div>
-                <div class = 'option'>
-                    <span>Numbers</span>
-                    <div class = 'icon-cross'><i class = 'fas fa-times'></i></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quiz Box Footer -->
-        <footer>
-            <div class = 'total-questions'>
-                <span> <p>1</p> of <p>5</p> questions</span>
-            </div>
-            <button class = 'next-btn'>Next</button>
-        </footer>
-    </div>
-
-    <!-- Result Box -->
-    <div class = "result-box">
-        <div class = 'crown'>
-            <i class = 'fas fa-crown'></i>
-        </div>
-        <div class = "completed">
-            <span>You've completed the Quiz!</span>
-        </div>
-        <div class = "score">
-            <span>You got <p>#</p> out of <p>#</p> correct!</span>
-        </div>
-        <div class = 'buttons'>
-            <button class = 'continue-btn'>Restart Quiz</button>
-            <button class = 'quit-btn'>Quit Quiz</button>
-        </div>
-    </div>
-
-    <script src='js/questions.js'></script>
-    <script src='js/quiz.js'></script>
+    <!-- linking js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1d37754851.js" crossorigin="anonymous"></script>
 </body>
 </html>

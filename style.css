@@ -1,0 +1,105 @@
+:root {
+    --lav: #8576A6;
+    --vio: #2B2840;
+    --mar: #8C2E62; 
+    --dar: #0D0D0D;
+    --lilav: #cbb3fc;
+    --bilav: #e6dcfc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Stlying the Body*/
+
+body {
+    background-color: var(--lilav); 
+}
+
+h1, 
+h2 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling the link into a button*/
+a {
+    color: var(--vio);
+    background-color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--vio);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #fff;
+    background-color: var(--vio);
+}
+
+/* Styling buttons*/
+#start-quiz-button {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--vio);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#start-quiz-button:hover{
+    background-color: lightgray;
+}
+
+.btn {
+    background-color: #fff;
+    color: var(--vio);
+    border-color: var(--vio);
+}
+
+.btn:hover {
+    background-color: var(--bilav);
+    color: var(--vio);
+}
+
+.btn:focus, 
+.btn:active, 
+.btn:visited {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #fff;
+    color: var(--vio);
+}
+
+/* Styling for various sections*/
+#finalScore {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#questionTitle {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2.5rem;
+}
+
+#answerCheck {
+    font-style: italic;
+    color: #4D5159;
+}
